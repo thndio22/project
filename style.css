@@ -1,0 +1,336 @@
+/* =====================================
+    RESET
+===================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    color: #1f1f1f;
+    background: #f9f9f9;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =====================================
+    NAVBAR (LIVERPOOL THEME)
+===================================== */
+.navbar {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    background: #111111;
+    color: #ffffff;
+    border-bottom: 2px solid #c8102E;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+.logo span {
+    color: #c8102E;
+}
+
+.menu {
+    display: flex;
+    gap: 40px;
+}
+
+.menu a {
+    font-size: 13px;
+    color: #dddddd;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #c8102E;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* =====================================
+    COLLECTION (YNWA VIBE)
+===================================== */
+.collection {
+    padding: 80px 7%;
+}
+
+.collection-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 65px;
+}
+
+.subtitle {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #c8102E;
+    font-weight: 700;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+}
+
+.collection-header h1 {
+    font-size: 52px;
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.description {
+    font-size: 14px;
+    color: #666;
+}
+
+/* =====================================
+    GALLERY (ASYMMETRIC SIZES)
+===================================== */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 320px;
+    gap: 24px;
+}
+
+.gallery .collection-item:nth-child(1) {
+    grid-column: span 2;
+}
+
+.gallery .collection-item:nth-child(4) {
+    grid-column: span 2;
+}
+
+.gallery .collection-item:nth-child(5) {
+    grid-row: span 2;
+}
+
+.image-box {
+    width: 100%;
+    height: 100%;
+    background: #e2dcd6;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.collection-item:hover .image-box img {
+    transform: scale(1.04);
+}
+
+.item-info {
+    padding-top: 13px;
+}
+
+.item-info h2 {
+    font-size: 17px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.item-info p {
+    font-size: 12px;
+    color: #777;
+}
+
+/* =====================================
+    ABOUT
+===================================== */
+.about {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    min-height: 480px;
+    background: #f1ede6;
+    border-top: 1px solid #ded6cc;
+    border-bottom: 1px solid #ded6cc;
+}
+
+.about-text {
+    padding: 80px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-text h2 {
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 1.15;
+    margin-bottom: 30px;
+}
+
+.about-text p:not(.subtitle) {
+    max-width: 390px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.about-image {
+    height: 100%;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* =====================================
+    CONTACT
+===================================== */
+.contact {
+    text-align: center;
+    padding: 100px 20px;
+    background: #ffffff;
+}
+
+.contact h2 {
+    font-size: 42px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.contact > p:not(.subtitle) {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.contact a {
+    font-size: 12px;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #c8102E;
+    color: #c8102E;
+    padding-bottom: 5px;
+    font-weight: 600;
+}
+
+/* =====================================
+    FOOTER
+===================================== */
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 7%;
+    border-top: 1px solid #dedbd5;
+    background: #111111;
+    color: #ffffff;
+}
+
+.footer-logo {
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-links a {
+    font-size: 11px;
+    color: #aaaaaa;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #c8102E;
+}
+
+.footer > p {
+    font-size: 10px;
+    color: #888;
+}
+
+/* =====================================
+    RESPONSIVE (PAGE 2)
+===================================== */
+@media (max-width: 900px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 300px;
+    }
+    .gallery .collection-item:nth-child(1),
+    .gallery .collection-item:nth-child(4),
+    .gallery .collection-item:nth-child(5) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    .about {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    .navbar { height: 65px; padding: 0 20px; }
+    
+    /* Mobile Menu Toggle Styling */
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background: #111111;
+        padding: 20px 0;
+        text-align: center;
+        border-bottom: 2px solid #c8102E;
+    }
+    .menu.active {
+        display: flex;
+    }
+    .menu-icon { display: block; }
+
+    .collection { padding: 55px 20px; }
+    .collection-header h1 { font-size: 38px; }
+    .gallery { grid-template-columns: 1fr; grid-auto-rows: 350px; gap: 30px; }
+    .gallery .collection-item:nth-child(1),
+    .gallery .collection-item:nth-child(4),
+    .gallery .collection-item:nth-child(5) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    .about { grid-template-columns: 1fr; }
+    .about-text { padding: 60px 25px; }
+    .about-text h2 { font-size: 34px; }
+    .about-image { height: 350px; }
+    .contact { padding: 75px 20px; }
+    .contact h2 { font-size: 34px; }
+    .footer { flex-direction: column; gap: 20px; text-align: center; }
+    .footer-links { gap: 20px; }
+}
